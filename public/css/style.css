@@ -5,3 +5,11 @@ footer {
     background-color: grey;
     font-weight: bold;
 }
+
+#product-card {
+    /* width: 200px; */
+    height: 18vw;
+    object-fit: contain;
+    /* margin: auto;
+    overflow: hidden; */
+}

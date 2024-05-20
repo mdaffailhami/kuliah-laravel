@@ -26,9 +26,26 @@
                     <li class="nav-item">
                         <a class="nav-link" href={{ route('home.about') }}>About</a>
                     </li>
-                    <li>
+                    <li class="nav-item">
                         <a class="nav-link" href={{ route('product.index') }}>Products</a>
                     </li>
+                    <div class="vr bg-white mx-2 d-none d-lg-block"></div>
+                    @guest
+                        <li class="nav-item">
+                            <a class="nav-link active" href="{{ route('login') }}">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="{{ route('register') }}">Register</a>
+                        </li>
+                    @else
+                        <li class="nav-item">
+                            <form id="logout" action="{{ route('logout') }}" method="POST">
+                                <a role="button" class="nav-link active"
+                                    onclick="document.getElementById('logout').submit();">Logout</a>
+                                @csrf
+                            </form>
+                        </li>
+                    @endguest
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
