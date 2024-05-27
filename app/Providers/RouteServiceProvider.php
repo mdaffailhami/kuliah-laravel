@@ -7,6 +7,8 @@ use Illuminate\Support\ServiceProvider;
 class RouteServiceProvider extends ServiceProvider
 {
     public const HOME = '/';
+    public const ADMIN = '/admin';
+    public const LOGIN = '/login';
     /**
      * Register services.
      */
