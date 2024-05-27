@@ -32,6 +32,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href={{ route('cart.index') }}>Cart</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('myaccount.orders') }}">My Orders</a>
+                    </li>
                     <div class="vr bg-white mx-2 d-none d-lg-block"></div>
                     @guest
                         <li class="nav-item">
